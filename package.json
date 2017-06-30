@@ -48,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://bitbucket.org/vgocha/iqlab_honcharko"
+    "url": "http://bitbucket.org"
   },
   "author": "Volodya Honcharko",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/vgocha/iqlab_honcharko#readme"
+  "homepage": "https://bitbucket.org"
 }
