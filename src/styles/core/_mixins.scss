@@ -1,0 +1,11 @@
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin transition ($selector:all, $time:.5s, $function: ease){
+	transition: all .5s ease;
+}

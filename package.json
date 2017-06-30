@@ -1,0 +1,56 @@
+{
+  "name": "honcharko_gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "angular": "1.5.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-tinypng-compress": "^1.2.1",
+    "gulp.spritesmith": "^6.2.1",
+    "http-server": "^0.10.0"
+  },
+  "settings": {
+    "sass": {
+      "sassInput": "./src/styles/**/*.scss",
+      "sassOutput": "build/styles"
+    },
+    "autoprefixer": {
+      "prefixInput": "./src/styles/main/*.css"
+    },
+    "watch": {
+      "watchInput": "./src/styles/**/*.scss"
+    },
+    "tinypng": {
+      "tinyIgnore": "!src/img/sptite/**/*",
+      "tinyInput": "src/img/*.{png,jpg,jpeg}",
+      "tinyOutput": "build/img"
+    },
+    "spritesmith": {
+      "input": "src/img/sprite/*.*",
+      "outputImage": "build/img",
+      "outputSass": "src/styles/core"
+    },
+    "iconfont": {
+      "input": "./src/fonts/icons/",
+      "template": "./src/styles/core/",
+      "outputFont": "./build/fonts/",
+      "outputScss": "../../src/styles/core/",
+      "fontName": "iconFontName"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://bitbucket.org/vgocha/iqlab_honcharko"
+  },
+  "author": "Volodya Honcharko",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/vgocha/iqlab_honcharko#readme"
+}

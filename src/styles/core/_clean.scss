@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+html, body, h1, h2, h3, h4, h5, h6, ul, li, p,
+header, footer, content, figure, figcaption, aside, article, section,
+nav, audio, video {
+	margin: 0;
+	padding: 0;
+}
+header, footer, content, figure, figcaption, aside, article, section,
+nav, audio, video {
+	display: block;
+}
+ul, li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+a > img {
+	display: block;
+	border: 0;
+	outline: 0;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+}

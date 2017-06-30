@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "iconFontName";
+    src: url('../fonts/iconFontName.eot');
+    src: url('../fonts/iconFontName.eot?#iefix') format('eot'),
+        url('../fonts/iconFontName.woff2') format('woff2'),
+        url('../fonts/iconFontName.woff') format('woff'),
+        url('../fonts/iconFontName.ttf') format('truetype'),
+        url('../fonts/iconFontName.svg#iconFontName') format('svg');
+}
+
+@mixin icon-styles {
+    font-family: "iconFontName";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+}
+
+%icon {
+    @include icon-styles;
+}
+
+@function icon-char($filename) {
+    $char: "";
+
+    @if $filename == clean {
+        $char: "\F120";
+    }
+    @if $filename == lap {
+        $char: "\F121";
+    }
+    @if $filename == pause {
+        $char: "\F122";
+    }
+    @if $filename == play {
+        $char: "\F123";
+    }
+
+    @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+    &:#{$insert} {
+        @if $extend {
+            @extend %icon;
+        } @else {
+            @include icon-styles;
+        }
+        content: icon-char($filename);
+    }
+}
+
+.icon-clean {
+    @include icon(clean);
+}
+.icon-lap {
+    @include icon(lap);
+}
+.icon-pause {
+    @include icon(pause);
+}
+.icon-play {
+    @include icon(play);
+}
